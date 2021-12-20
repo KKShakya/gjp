@@ -3,10 +3,20 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 18px;
+    text-transform: capitalize;
+    transition: all 0.3s ease-in-out;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 body, html {
     height: 100%;
+    background: #0575E6;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #021B79, #0575E6);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #021B79, #0575E6);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .container {
@@ -15,11 +25,25 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .todo-container {
-    border: 1px solid black;
-    padding: 5px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.todo-container header {
+    font-size: 18px;
+    font-weight: 900;
+    margin: 15px;
+
+}
+
+.todo-container {
+    /* border: 1px solid black; */
+    padding: 15px;
+
 }
 
 .todo-container input {
@@ -35,11 +59,68 @@ body, html {
 }
 
 .todos div {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
-    margin: 5px;
+    margin-top: 10px;
 }
 
 .mla {
     margin-left: auto;
+}
+
+.todos div {
+    background: lightgrey;
+    border-radius: 5px;
+}
+
+.todos button {
+    background: rgba(255, 0, 0, 0.76);
+    border-radius: 5px;
+    border: none;
+    color: wheat
+}
+
+
+.card-1 {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.card-1:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.input-container {
+    display: flex;
+}
+
+.input-container button {
+    background: #8E49E9;
+    border: none;
+    margin: 0 10px;
+    border-radius: 5px;
+}
+
+
+.add-btn {
+    flex: 1
+}
+
+input {
+    border: 3px solid #ccc;
+    border-radius: 10px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.del-btn {
+    box-sizing: border-box;
+}
+
+.del-btn:hover {
+    background: #fff;
+    color: red;
+    border: 1px solid red;
 }
