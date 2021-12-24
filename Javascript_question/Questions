@@ -1,0 +1,22 @@
+----------------------------
+1. What are possible ways of creating object in js.
+ans: 
+1.object constructor       var obj =new Object()
+2.Object.creat() Method    var obj = Object.creat(null) 
+3.Object Literal Syntax    var obj = {}
+4. function constructor      function Person(name){
+                                this.name=name;
+
+                            }
+                            var object =new Person('Sudheer);
+5. Es6 Syntax :          
+ class Person{
+    constructor(name){
+        this.name = name;
+
+    }
+}
+var object = new Person('sudheer);
+
+---------------------------------------------------------------------------------------------
+2.
