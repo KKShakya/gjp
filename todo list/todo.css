@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body,
+.contain {
+    height: 100%;
+}
+
+.contain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    display: flex;
+    padding: 5px;
+    border: 2px solid black;
+    width: fit-content;
+    margin: 2px;
+}
+
+.todo-container main {
+    display: flex;
+    padding: 2px;
+    margin: 1px;
+    justify-content: space-between;
+}
+
+.main .plus button {
+    height: 30px;
+    width: 30px;
+    font-size: larger;
+    margin: 2px;
+    border-radius: 5px;
+    border: 1px solid red;
+}
+
+.main .plus :hover {
+    transform: scale(1.5, 1.5);
+    transition: 6ms ease-in-out;
+}
+
+.main .input .input-value {
+    height: 30px;
+    margin: 2px;
+    box-shadow: 5px 5px lightgrey;
+}
+
+.main .input .input-value:hover {
+    transform: scale(1.2, 1);
+    transition: 4ms ease-in-out;
+}

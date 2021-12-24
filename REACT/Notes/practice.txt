@@ -1,0 +1,148 @@
+Assignment 1---------------------------------------------------------------------------------------------
+Use ReactDOM.render() to render your name on the screen using cdn links.
+
+
+<head>
+    <link rel="stylesheet" href="index.css">
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+
+
+Assignment 2----------------------------------------------------------------------------------------------
+
+Try to write that 1-liner of React code again! This time,
+see if you can figure out how to render an <ul> with 2+ <li>s inside*/
+
+
+
+Assignment 3--------------------------------------------------------------------------------------
+1. Why do we need to `import React from "react"` in our files?
+React is what defines JSX
+
+2. If I were to console.log(page) in index.js, what would show up?
+A JavaScript object. React elements that describe what React should
+eventually add to the real DOM for us.
+
+3. What's wrong with this code:
+```
+const page = (
+    <h1>Hello</h1>
+    <p>This is my website!</p>
+)
+```
+We need our JSX to be nested under a single parent element
+
+4. What does it mean for something to be "declarative" instead of "imperative"?
+Declarative means I can tell the computer WHAT to do 
+and expect it to handle the details. Imperative means I need
+to tell it HOW to do each step.
+
+5. What does it mean for something to be "composable"?
+We have small pieces that we can put together to make something
+larger/greater than the individual pieces.
+
+
+Assignment 4------------------------------------------------------------------------------
+Create a app showing morning, afternoon, night according to the systime ?
+
+
+import React from "react"
+import ReactDOM from "react-dom"
+
+function App() {
+    const date = new Date()
+    const hours = date.getHours()
+    let timeOfDay
+    
+    if (hours < 12) {
+        timeOfDay = "morning"
+    } else if (hours >= 12 && hours < 17) {
+        timeOfDay = "afternoon"
+    } else {
+        timeOfDay = "night"
+    }
+    
+    /**
+     * Challenge: fix the h1 below to use the timeOfDay
+     * string we determined in the code above
+     */
+    
+    return (
+        <h1>Good {timeOfDay}!</h1>
+    )
+}
+
+ReactDOM.render(<App />, document.getElementById("root"))
+
+
+Assignment 5 ------------------------------------------------------------------------------------------------------------------------
+
+/*
+Challenge 1:
+Given an array of numbers, return an array of each number, squared
+*/
+const nums = [1, 2, 3, 4, 5]
+// -->       [1, 4, 9, 16, 25]
+// Your code here
+const squares = nums.map(function(num) {
+    return num * num
+})
+
+console.log(squares)
+
+
+/*
+Challenge 2:
+Given an array of strings, return an array where 
+the first letter of each string is capitalized
+*/
+
+const names = ["alice", "bob", "charlie", "danielle"]
+// -->        ["Alice", "Bob", "Charlie", "Danielle"]
+// Your code here
+const capitalized = names.map((name) => {
+    return name[0].toUpperCase() + name.slice(1)
+})
+
+/*
+Challenge 3:
+Given an array of strings, return an array of strings that wraps each
+of the original strings in an HTML-like <p></p> tag.
+
+E.g. given: ["Bulbasaur", "Charmander", "Squirtle"]
+return: ["<p>Bulbasaur</p>", "<p>Charmander</p>", "<p>Squirtle</p>"]
+*/
+
+const pokemon = ["Bulbasaur", "Charmander", "Squirtle"]
+        ["<p>Bulbasaur</p>", "<p>Charmander</p>", "<p>Squirtle</p>"]
+
+
+const paragraphs = pokemon.map((mon) => {
+    return `<p>${mon}</p>`
+})
+
+console.log(paragraphs)
+
+
+Assignment 6 ---------------------------------------------------------------------------------------------------------
+1. What does the `.map()` array method do?
+Returns a new array. Whatever gets returned from the callback
+function provided is placed at the same index in the new array.
+Usually we take the items from the original array and modify them
+in some way.
+
+
+2. What do we usually use `.map()` for in React?
+Convert an array of raw data into an array of JSX elements
+that can be displayed on the page.
+
+
+3. Why is using `.map()` better than just creating the components
+   manually by typing them out?
+It makes our code more "self-sustaining" - not requiring
+additional changes whenever the data changes.
+
+

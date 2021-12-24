@@ -85,34 +85,34 @@
 
 
 
-let balance = 1000;
-function withdraw() {
-    return new Promise((resolve, reject) => {
-        if (balance > 0) {
-            setTimeout(() => {
-                balance -= 100;
-                resolve("withdrawn 100" + " " + balance);
-            }, 1000 * 5);
-        } else {
-            reject("insuficient funds");
-        }
-    })
-}
+// let balance = 1000;
+// function withdraw() {
+//     return new Promise((resolve, reject) => {
+//         if (balance > 0) {
+//             setTimeout(() => {
+//                 balance -= 100;
+//                 resolve("withdrawn 100" + " " + balance);
+//             }, 1000 * 5);
+//         } else {
+//             reject("insuficient funds");
+//         }
+//     })
+// }
 
-async function fun() {
-    try {
-        console.log("start");
-        let result = await withdraw();
-        console.log(result);
-        console.log("end");
-    } catch (error) {
-        console.log("err", error);
-        console.log("end");
-    }
-}
+// async function fun() {
+//     try {
+//         console.log("start");
+//         let result = await withdraw();
+//         console.log(result);
+//         console.log("end");
+//     } catch (error) {
+//         console.log("err", error);
+//         console.log("end");
+//     }
+// }
 
 
-fun();
+// fun();
 
 
 

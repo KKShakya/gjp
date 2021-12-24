@@ -1,0 +1,8 @@
+1. React setup using CDN.
+2. Introduction to Functional Component.
+3. What is JSX.
+4. How to create with create-react-app .
+5. Why we use className instead of class.
+6. Understanding Array map().
+7. Understanding React render arrays.
+8. Loading images through .map().(making a images folder but in these case moving the folder to public)

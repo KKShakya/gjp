@@ -134,8 +134,12 @@
 
 // const { readFile } = require("fs")
 
-
-
+let data = axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${"noida"}&appid=bab281d79e5f1e9755a68d754cc313e7&units=metric)`);
+data.then((res) => {
+    console.log(res.data.weather);
+}).catch(err => {
+    console.log(err);
+});
 
 
 
