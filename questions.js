@@ -9,7 +9,10 @@ var pro = new Promise((resolve, reject) => {
         }
     })
 });
-for (let i = 1; i < arr.length; i++) {
+
+// 3  => 4
+
+for (let i = 1; i < arr.length + 1; i++) {
     pro = pro.then(data => {
         console.log(data);
         return new Promise((resolve, reject) => {
@@ -24,11 +27,9 @@ for (let i = 1; i < arr.length; i++) {
     })
 }
 
-
-
-pro.then(data => {
-    console.log(data);
-})
+// pro.then(data => {
+//     console.log(data);
+// })
 
 // getVideos().then(data => {
 //     setVideosonUi(arr)
@@ -49,6 +50,14 @@ pro.then(data => {
 //     console.log(result);
 //     console.log(2);
 // })()
+
+
+
+
+
+
+
+
 
 
 
