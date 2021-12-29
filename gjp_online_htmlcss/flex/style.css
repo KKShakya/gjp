@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+}
+
+body,html {
+    height: 100%;
+}
+
+.parent {
+    height: 100%;
+    background: red;
+    width: 100%;
+}
+
