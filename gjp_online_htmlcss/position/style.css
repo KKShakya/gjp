@@ -1,0 +1,48 @@
+.parent {
+    background-color: lightcoral;
+    height: 400px;
+    width: 400px;
+    position: relative;
+}
+
+.parent div {
+    height: 100px;
+    width: 100px;
+}
+
+.div-1 {
+    background-color: lightskyblue;
+    /* position: relative;
+    left: 100px;
+    top: 100px; */
+    /*
+    top
+    bottom
+    right
+    left 
+     */
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.div-2 {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: lightgreen;
+}
+
+.div-3 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: lightslategray;
+}
+
+.div-4 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: aquamarine;
+}
