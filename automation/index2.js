@@ -2,7 +2,7 @@ const puppeteer = require("puppeteer")
 
 const fs = require('fs')
 let page;
-
+let browser;
 puppeteer.launch({
     headless: false,
     defaultViewport: null
