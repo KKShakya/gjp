@@ -1,9 +1,8 @@
 const puppeteer = require("puppeteer")
 
-const fs =require('fs')
+const fs = require('fs')
 let page;
 let browser;
-
 puppeteer.launch({
     headless: false,
     defaultViewport: null
@@ -33,28 +32,37 @@ puppeteer.launch({
         delay: 300
     })
 }).then(typingHogai => {
-
     return page.type(".nav-search-field input", String.fromCharCode(13));
 }).then(res => {
     return page.waitForTimeout(1000)
-   
 }).then(res => {
+<<<<<<< HEAD
     return page.evaluate(() => {
          let arr =[]
+=======
+    page.evaluate(() => {
+        let arr = []
+>>>>>>> 3e833ddebf8c1dd58c6b4d37be1535289f32c8e6
         // to get the prices of laptops 
-        let dataArr = document.querySelectorAll('.a-size-medium.a-color-base.a-text-normal')
-        dataArr.forEach((ele) => {
-            console.log(ele.innerText);
-            let elements = ele.innerText
-            arr.push(elements);
-    
+        let dataArr = document.querySelectorAll('.sg-col.sg-col-4-of-12.sg-col-8-of-16.sg-col-12-of-20')
+        dataArr.forEach(laptop => {
+
+            let name = laptop.querySelector("h2")
+            name = name.innerText
+
+            let price = laptop.querySelectorAll("span.a-price .a-offscreen")
+            price = price[0].innerText
+
+            arr.push({
+                name,
+                price
+            })
         })
-         return arr;
+        return arr;
         // somehow write it in text file
+    }).then((res) => {
+        fs.writeFileSync('data.json', JSON.stringify(res))
     })
-}) .then((res) => {
-        console.log(res);
-    fs.writeFileSync('data.txt', JSON.stringify(res))
-}) .catch(err => {
-        console.log(err);
-    })
+}).catch(err => {
+    console.log(err);
+})

@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    /* font-size: 100px; */
+}
+
+body, html {
+    height: 100%;
+}
+
+.parent {
+    height: 100%;
+    background-color: cadetblue;
+    /* width: 100%; */
+    display: flex;
+    /* flex-direction: column; */
+    /* flex-direction: row-reverse; */
+    /* justify-content: start; */
+    /* justify-content: center; */
+    /* justify-content: end; */
+    /* justify-content: space-between; */
+    /* justify-content: space-around; */
+    /* justify-content: space-evenly; */
+
+    /* align-items: start; */
+    /* align-items: center; */
+    /* align-items: end; */
+    
+    /* justify-content: center; */
+    /* align-items: center; */
+
+}
+
+.parent div {
+    height: 100px;
+    width: 100px;
+    color: white;
+    font-size: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-1 {
+    /* align-self: end; */
+    /* flex: 1; */
+    /* margin-right: auto; */
+    background-color: red;
+}
+
+.div-2 {
+    /* align-self:end; */
+    /* flex: 3; */
+    color: black;
+    /* margin-left: auto; */
+    background-color: blue;
+}
+
+.div-3 {
+    /* flex: 1; */
+    background-color: green;
+}
+
+.div-4 {
+    /* align-self: center; */
+    /* justify-self: center; */
+    /* flex: 1; */
+    background-color: violet;
+}
