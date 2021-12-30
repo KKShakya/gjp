@@ -39,7 +39,7 @@ puppeteer.launch({
     return page.waitForTimeout(1000)
    
 }).then(res => {
-     page.evaluate(() => {
+    return page.evaluate(() => {
          let arr =[]
         // to get the prices of laptops 
         let dataArr = document.querySelectorAll('.a-size-medium.a-color-base.a-text-normal')
@@ -51,11 +51,10 @@ puppeteer.launch({
         })
          return arr;
         // somehow write it in text file
-    }).then((res) => {
-        console.log(res);
-         fs.writeFileSync('data.txt',JSON.stringify(res))
     })
-})
-    .catch(err => {
+}) .then((res) => {
+        console.log(res);
+    fs.writeFileSync('data.txt', JSON.stringify(res))
+}) .catch(err => {
         console.log(err);
     })
